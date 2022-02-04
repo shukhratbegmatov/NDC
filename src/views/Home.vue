@@ -40,7 +40,7 @@
       </div>
     </header>
     <section class="section_one">
-      <div class="container pt-5" v-for="(item,index) in 4" :key="index">
+      <div class="container" v-for="(item,index) in 4" :key="index">
         <div class="portfoliyo">
           <div>
             <h1 class="port_title">Таможенная карта</h1>
@@ -465,17 +465,67 @@ export default {
   },
   data() {
     return {
-      settings:{
-        "dots": false,
-        "focusOnSelect": false,
-        "infinite":true,
-        "speed": 500,
-        "slidesToShow": 3,
-        "slidesToScroll": 1,
-        "touchThreshold": 5,
-        'autoplay':true,
-        'autoplaySpeed':1500
-      },
+      settings: {
+        "responsive": [
+          {
+          "breakpoint": 2000,
+          "settings": {
+            "dots": false,
+            "focusOnSelect": false,
+            "infinite": true,
+            "speed": 500,
+            "slidesToShow": 3,
+            "slidesToScroll": 1,
+            "touchThreshold": 5,
+            'autoplay': true,
+            'autoplaySpeed': 1500
+          }
+        },
+          {
+            "breakpoint": 1300,
+            "settings": {
+              "dots": false,
+              "focusOnSelect": false,
+              "infinite": true,
+              "speed": 500,
+              "slidesToShow": 3,
+              "slidesToScroll": 1,
+              "touchThreshold": 5,
+              'autoplay': true,
+              'autoplaySpeed': 1500
+            }
+          },
+          {
+            "breakpoint": 1100,
+            "settings": {
+              "dots": false,
+              "focusOnSelect": false,
+              "infinite": true,
+              "speed": 500,
+              "slidesToShow": 2,
+              "slidesToScroll": 1,
+              "touchThreshold": 5,
+              'autoplay': true,
+              'autoplaySpeed': 1500
+            }
+          },
+
+          {
+            "breakpoint": 700,
+            "settings": {
+              "dots": false,
+              "focusOnSelect": false,
+              "infinite": true,
+              "speed": 500,
+              "slidesToShow": 1,
+              "slidesToScroll": 1,
+              "touchThreshold": 5,
+              'autoplay': true,
+              'autoplaySpeed': 1500
+            }
+          }
+        ]
+      }
     }
     },
   methods:{

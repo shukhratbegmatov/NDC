@@ -143,7 +143,16 @@ body {
 .section_one {
     background: rgba(15, 15, 15, 1);
 }
-
+@media (max-width: 1600px) {
+    .section_one{
+        padding-top: 250px;
+    }
+}
+@media (max-width: 1300px) {
+    .section_one{
+        padding-top: 350px;
+    }
+}
 .port_title {
     font-family: Gilroy;
     font-style: normal;
@@ -157,6 +166,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 30px;
 }
 
 .port_links {
